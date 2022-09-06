@@ -1,13 +1,26 @@
 /*////////////// Fonts //////////////*/
-
+:root{
+	--greyFaded: rgba(120,120,120, 0.5);
+	--siteColour1: rgb(152,173,166);
+	--pColour1:  #555;
+}
 /* link the web font used for the level 1 heading here */
 
-/*////////// Global Styles //////////*/
+@font-face {
+	font-family: 'Baskerville';
+	src: url(../fonts/Baskerville.ttc);
+}
 
+
+/*////////// Global Styles //////////*/
+html, body, .wrapper{
+	min-height: 100%;
+}
 body {
 	background: #F3EBE9;
 	font-size: 100%;
 	font-family: 'Times New Roman', serif; 
+	
 }
 
 .wrapper {
@@ -17,4 +30,67 @@ body {
 	padding: 0 45px 20px;
 }
 
+
+
+
 /* Write all remaining styles here */
+#mainHeader{
+	border-bottom: solid 1px var(--greyFaded);
+}
+#mainHeader > h1{
+	margin-bottom: 0.3em;
+}
+header{
+	color: var(--siteColour1);
+}
+
+h1{
+	font-family: "baskerville";
+	font-size: 4em;
+}
+h2{
+	font-size: 2em;
+}
+p{
+	color: var(--pColour1);
+}
+
+a, a:active, a:visited {
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+}
+
+section{
+	margin: 10px 0;
+}
+
+.splash-image{
+	border: solid 5px var(--siteColour1);
+}
+
+.splash-image > img{
+	max-width: 100%;
+	max-height: 100%;
+}
+
+#footer-links{
+	display: flex;
+	min-height: 30px;
+	justify-content: space-evenly;
+}
+
+#footer-links > div{
+	border: solid 4px var(--greyFaded);
+	transition: all 0.1s ease-in-out;
+}
+
+#footer-links > div:hover{
+	border: solid 4px var(--siteColour1);
+}
+
+#footer-copyright{
+	text-align: right;
+	color: var(--greyFaded);
+}
